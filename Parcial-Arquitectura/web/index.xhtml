@@ -42,7 +42,6 @@
                                         <ul class="nav nav-list">
                                             <li><a href="#">Submenu1.1</a></li>
                                             <li><a href="#">Submenu1.2</a></li>
-                                            <li><a href="#">Submenu1.3</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -54,28 +53,76 @@
                                         <ul class="nav nav-list">
                                             <li><a href="#">Submenu2.1</a></li>
                                             <li><a href="#">Submenu2.2</a></li>
-                                            <li><a href="#">Submenu2.3</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Normalmenu</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> WithBadges <span class="badge pull-right">42</span></a></li>
+                                <li>
+                                    <a href="#" data-toggle="collapse" data-target="#toggleDemo3" data-parent="#sidenav01" class="collapsed">
+                                        <span class="glyphicon glyphicon-inbox"></span> Submenu 3 <span class="caret pull-right"></span>
+                                    </a>
+                                    <div class="collapse" id="toggleDemo3" style="height: 0px;">
+                                        <ul class="nav nav-list">
+                                            <li><a href="#">Submenu2.1</a></li>
+                                            <li><a href="#">Submenu2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="collapse" data-target="#toggleDemo4" data-parent="#sidenav01" class="collapsed">
+                                        <span class="glyphicon glyphicon-inbox"></span> Submenu 4 <span class="caret pull-right"></span>
+                                    </a>
+                                    <div class="collapse" id="toggleDemo4" style="height: 0px;">
+                                        <ul class="nav nav-list">
+                                            <li><a href="#">Submenu2.1</a></li>
+                                            <li><a href="#">Submenu2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="collapse" data-target="#toggleDemo5" data-parent="#sidenav01" class="collapsed">
+                                        <span class="glyphicon glyphicon-inbox"></span> Submenu 5 <span class="caret pull-right"></span>
+                                    </a>
+                                    <div class="collapse" id="toggleDemo5" style="height: 0px;">
+                                        <ul class="nav nav-list">
+                                            <li><a href="#">Submenu2.1</a></li>
+                                            <li><a href="#">Submenu2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="collapse" data-target="#toggleDemo6" data-parent="#sidenav01" class="collapsed">
+                                        <span class="glyphicon glyphicon-inbox"></span> Submenu 6 <span class="caret pull-right"></span>
+                                    </a>
+                                    <div class="collapse" id="toggleDemo6" style="height: 0px;">
+                                        <ul class="nav nav-list">
+                                            <li><a href="#">Submenu2.1</a></li>
+                                            <li><a href="#">Submenu2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="collapse" data-target="#toggleDemo7" data-parent="#sidenav01" class="collapsed">
+                                        <span class="glyphicon glyphicon-inbox"></span> Submenu 7 <span class="caret pull-right"></span>
+                                    </a>
+                                    <div class="collapse" id="toggleDemo7" style="height: 0px;">
+                                        <ul class="nav nav-list">
+                                            <li><a href="#">Submenu2.1</a></li>
+                                            <li><a href="#">Submenu2.2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-9 col-md-10 affix-content">
-                <div class="container" style="background-color: #A9F5E1">
-
-                    <div class="page-header">
-                        <h3><span class="glyphicon glyphicon-th-list"></span> Navigation</h3>
-                    </div>
-                </div>
                 <div>
-                    <ui:insert name="content">Default content</ui:insert></div><!-- <ui:include src="/PrimeraCEAL.xhtml" />-->
+                    <ui:insert name="content">Default content</ui:insert>
                 </div>
+                <!-- <ui:include src="/PrimeraCEAL.xhtml" />-->
             </div>
+        </div>
     </h:body>
 </html>
 
