@@ -9,18 +9,32 @@ package Beans;
  *
  * @author Armando
  */
-
+ 
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
- 
-import org.primefaces.event.ToggleEvent;
+import org.primefaces.event.TabChangeEvent;
+import org.primefaces.event.TabCloseEvent;
  
 @ManagedBean
 public class PizzeriaField {
      
-    public void handleToggle(ToggleEvent event) {
-        FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Toggled", "Visibility:" + event.getVisibility());
-        FacesContext.getCurrentInstance().addMessage(null, msg);
+    private List<String> images;
+     
+    @PostConstruct
+    public void init() {
+        images = new ArrayList<String>();
+        for (int i = 1; i <= 4; i++) {
+            images.add("pizza" + i + ".jpg");
+        }
     }
+ 
+    public List<String> getImages() {
+        return images;
+    }
+        
+     
 }
