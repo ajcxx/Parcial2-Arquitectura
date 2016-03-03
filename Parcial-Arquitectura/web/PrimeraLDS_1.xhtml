@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Laura Dennise Santuario Meneses
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                template="index.xhtml">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" library="imgLDS" name="deportes.css"/> 
+
+    <ui:define name="content">
+        <h:form id="form" >
+            <p:growl id="msgs" showDetail="true" />
+            <div class="page-header">
+                <center><div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'de,en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                    }
+                    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </center>
+
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="PrimeraLDS_1.xhtml">Pagina Principal</a></li>
+                    <li role="presentation"><a href="#">Ofertas</a></li>
+                    <li role="presentation"><a href="#">Lo Mas Vendido</a></li>
+                </ul> 
+            </div>
+            <h:graphicImage library="imgLDS" name="arriba.jpg" />
+            <center><h1 style="color: black">Somos Tu <small style="color: black">Mejor Opción</small></h1></center>
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+
+
+                    <p style="color: black">Comprar articulos Deportivos hoy en día puede resultar algo tardado
+                        y cansado,Nosotros ofrecemos una opcion diferente pero en ningún momento complicado, ya que somos
+                        una tienda online de deportes especializada en la venta online.</p>
+                    <center>
+                        <p:galleria value="#{imagesVeo.images}" var="imagen" panelWidth="300" panelHeight="200" showCaption="true">
+                            <p:graphicImage library="imgLDS" name="#{imagen}" alt="imagen#{imagen}" title="#{imagen}"/>
+                        </p:galleria>
+
+
+                        <P style="color: black">Como muchas otras grandes firmas de moda o de deportes, Diadora comenzó siendo una pequeña empresa 
+                            familiar, pero gracias a la alta calidad de los materiales utilizados, se convirtió en una reconocida 
+                            marca en toda Italia, en sus botas de montaña, su especialidad en el momento.</P>
+                        <h:graphicImage library="imgLDS" name="zapato.jpg" /></center>
+                </div>
+                <div class="col-xs-7 col-md-4">
+                    <section class="contenedorLogin">
+                        <h:form class="formulario"> 
+                            <h3>Hora Actual</h3>
+                            <p:clock pattern="HH:mm:ss dd.MM.yyyy" mode="server" />
+                            <center><h2>Usuario</h2></center>
+                            <center><div class="form-group">
+                                    <div class="col-lg-10">
+                                        <p><h:inputText  class="form-control" pt:placeholder="Usuario" required="true"  requiredMessage="Porfavor Ingrese su Usuario" value="#{ingresar.nombre}" /></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-lg-10">
+                                        <p><h:inputSecret class="form-control"  pt:placeholder="Contraseña" required="true"  requiredMessage="Porfavor Ingrese su Contraseña" value="#{ingresar.contraseña}" /></p>
+                                    </div>
+                                </div>
+                                <h:messages errorStyle="color: red;list-style:none;"/>
+                                <br/>
+                                <section class="seccionBotones">
+
+                                    <div class="form-group">
+
+                                        <h:commandButton class="btn btn-default navbar-btn" value="Ingresar" action="#{ingresar.Login()}" />
+                                        <br/>
+                                        <a href="#" title="Mi enlace">Registrarse</a>
+                                    </div>
+                                </section>
+                            </center>
+                        </h:form>
+
+                    </section>
+                    <h:graphicImage library="imgLDS" name="tenis.jpg" />
+                </div>
+            </div> </h:form>
+
+    </ui:define>
+
+</ui:composition>
+
