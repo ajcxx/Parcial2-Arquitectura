@@ -13,30 +13,97 @@ CArlos Alvarado Luis
     <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
     <script src="resources/js/bootstrap.min.js"></script>
     <ui:define name="content">
-        <h:form id="form">
-            <p:growl id="msgs" showDetail="true" />
-            <h3 style="margin-top:0">Basic</h3>
-            <p:accordionPanel>
-                <p:tab title="Godfather Part I">
-                    <h:panelGrid columns="2" cellpadding="10">
-                        <p:graphicImage name="demo/images/godfather/godfather1.jpg" />
-                        <h:outputText
-                            value="The story begins as Don Vito Corleone..." />
-                    </h:panelGrid>
-                </p:tab>
-                <p:tab title="Godfather Part II">
-                    <h:panelGrid columns="2" cellpadding="10">
-                        <p:graphicImage name="demo/images/godfather/godfather2.jpg" />
-                        <h:outputText value="Francis Ford Coppola's legendary..." />
-                    </h:panelGrid>
-                </p:tab>
-                <p:tab title="Godfather Part III">
-                    <h:panelGrid columns="2" cellpadding="10">
-                        <p:graphicImage name="demo/images/godfather/godfather3.jpg" />
-                        <h:outputText value="After a break of more than 15 years..." />
-                    </h:panelGrid>
-                </p:tab>
-            </p:accordionPanel>
-        </h:form>
+        <div class="container">
+            <div class="navbar-header" style="background-color: whitesmoke">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    Ingresar
+                    <span class="sr-only">Ingresar</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control" required="true"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control" required="true"/>
+                    </div>
+                    <button type="submit" class="btn btn-success">Ingresar</button>
+                </form>
+            </div>
+        </div>
+        <div class="jumbotron" style="background-color: #F3E2A9">
+            <div class="container">
+                <center><h3>Plaza Comercial del Centro</h3></center>
+                <p style="text-align:justify; font-size:14px">Es un nuevo centro comercial donde los clientes gozarán de un ambiente moderno, con múltiples opciones de compra,
+                    servicios y restaurantes cubriendo así todas sus necesidades en un mismo lugar.Cuenta con locales destinados 
+                    y equipados en cuanto a sus instalaciones para brindar servicios de restaurantes, cafés, bancos, minisúper, 
+                    servicios municipales, igualmente servicios menores como papelería, farmacia, repostería, zapatería, boutique, 
+                    estética de belleza, etc. Así mismo cuenta con áreas jardinadas y un ambiente inigualable para ti y tu familia.
+                </p><br/>
+                <p style="text-align:justify; font-size:14px">No olvides que para mejorar la interacción y mantenerte siempre
+                informado con las mejores ofertas y eventos automaticamente, debes ingresar a tu cuenta. Y si no tienes una, 
+                registrate cuanto antes¡¡¡</p>
+                <p><h:form><h:commandLink class="btn btn-primary btn-sm" role="button" >Registrarse</h:commandLink></h:form></p>
+            </div>
+        </div>
+        <div class="container">
+            <h:form id="form1">
+                <p:growl id="msgs" showDetail="true" />
+                <h3 style="margin-top:0">Secciones</h3>
+                <p:accordionPanel>
+                    <p:tab title="Libreria" >
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <p:graphicImage library="imgMenu" name="libreria.jpg" class="img-rounded"/>
+                            <h:outputText
+                                value="Busca y compra el libro que estas deseando de una manera fácil y segura. Libros para adolescentes, niños, entretenimientos, libros electrónicos, sagas." />
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab title="Cine">
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <p:graphicImage library="imgMenu" name="cine.jpg" class="img-rounded"/>
+                            <h:outputText value="" />
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab title="Pizzeria">
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <p:graphicImage library="imgMenu" name="pizza.jpg" class="img-rounded" />
+                            <h:outputText value="After a break of more than 15 years..." />
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab title="Musica" >
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <p:graphicImage library="imgMenu" name="musica.jpg" class="img-rounded" />
+                            <h:outputText
+                                value="Music ha sido reconocida como la tienda de instrumentos musicales y equipo de audio e iluminación más importante en México, destacada por su personal calificado y altamente responsable, por la amplia variedad y calidad que ofrece en cada uno de sus productos y por su constante innovación, marcando tendencia en sus instalaciones, dirigidas a hacer más placentera y satisfactoria la experiencia de compra." />
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab title="Deportes">
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <p:graphicImage library="imgMenu" name="Deportes.jpg" class="img-rounded" />
+                            <h:outputText
+                                value="The story begins as Don Vito Corleone..." />
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab title="Restaurant">
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <p:graphicImage library="imgMenu" name="restaurants-005.jpg" class="img-rounded" />
+                            <h:outputText
+                                value="The story begins as Don Vito Corleone..." />
+                        </h:panelGrid>
+                    </p:tab>
+                    <p:tab title="Mascotas">
+                        <h:panelGrid columns="2" cellpadding="10">
+                            <p:graphicImage library="imgMenu" name="Macotas.jpg" class="img-rounded" />
+                            <h:outputText
+                                value="En La Tienda de Mascotas nos preocupa la creciente población de perros abandonados, estamos convencidos que el sano convivió y cuidado de nuestras mascotas fortalecerá los lazos entre los perros y sus familias, atenuando este problema de abandono. Por eso pusimos esta tienda, en ella van a poder encontrar productos cuidadosamente seleccionados que te ayudaran a generar estos lazos." />
+                        </h:panelGrid>
+                    </p:tab>
+                </p:accordionPanel>
+            </h:form>
+        </div>
     </ui:define>
 </ui:composition>
