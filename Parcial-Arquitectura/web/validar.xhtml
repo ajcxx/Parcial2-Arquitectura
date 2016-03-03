@@ -1,10 +1,19 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    
-    <h:head>
-        <center>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CArlos Alvarado Luis
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                template="index.xhtml">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <ui:define name="content">
+         <center>
         <title>Pagina de confirmación</title>
         
         <div id="google_translate_element"></div><script type="text/javascript">
@@ -13,32 +22,35 @@ function googleTranslateElementInit() {
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         </center>
-    </h:head>
-    <h:body>
+
+    
+    
+        <div class="panel-body"  style="background-color: #F3E2A9">
         <center>
        <h2>Confirmación</h2>
-       <h:graphicImage library="images" name="datos-cap.png"/>
+       
 <h:panelGrid columns="2"
     columnClasses="rightalign-bold,normal">
-<h:outputText value="Nombre: " style="color: indigo"/>
+<h:outputText value="Nombre: " style="color: black"/>
 <h:outputText
     value="#{ingresar.nombre}" />
-<h:outputText value="Apellidos:" style="color: indigo"/>
+<h:outputText value="Apellidos:" style="color: black"/>
 <h:outputText value="#{ingresar.apeido}" />
-<h:outputText value="Domicilio:" style="color: indigo"/>
+<h:outputText value="Domicilio:" style="color: black"/>
 <h:outputText value="#{ingresar.domicilio}" />
-<h:outputText value="Sexo:" style="color: indigo"/>
+<h:outputText value="Sexo:" style="color: black"/>
 <h:outputText value="#{ingresar.sexo}"/>
-<h:outputText value="Cuatrimestre:" style="color: indigo"/>
+<h:outputText value="Cuatrimestre:" style="color: black"/>
 <h:outputText value="#{ingresar.hermanos}" />
 </h:panelGrid>
        
        <h:form>
-           <h:commandButton value="Ingresar Usuario" style="background-color: chartreuse" />        
+            <h:commandButton id="register" class="btn btn-default navbar-btn" value="Salir" action="PrimeraLDS_1" style="background-color: activeborder" />
+                 
        </h:form>
        
       
     </center>
-    </h:body>
-</html>
-
+        </div>
+    </ui:define>
+</ui:composition>
