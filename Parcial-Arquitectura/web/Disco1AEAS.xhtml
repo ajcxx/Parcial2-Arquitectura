@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Arturo Eden Aragon Sanchez
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                template="index.xhtml">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <ui:define name="content">
+        <center><div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'de,en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                    }
+                    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </center>
+        <link rel="stylesheet" href="/Parcial-Arquitectura/resources/css/cssFormulario.css"/>
+        <section class="fondoinicio">
+        <section class="contenedorLogin">
+        <h:form class="formulario">
+        <h:outputLabel value="Bienvenidos" style="color: darkslategrey"/>
+        </h:form>    
+        </section>
+            
+        <section class="contenedorLogin">
+            <h:form class="formulario">
+        <h:outputLabel value="Tienda de Musica: MegaMax" style="color: darkslategrey"/>        
+        </h:form>
+            </section>
+            
+        <section class="contenedorLogin">
+            <h:form class="formulario">
+        <h:outputLabel value="Ven y Conocenos" style="color: darkslategrey"/>
+            </h:form>
+        </section>
+            
+        <section class="contenedorLogin">
+            <h:form class="formulario">
+        <h:outputLabel value="Tenemos los discos mas recientes" style="color: darkslategrey"/>
+            </h:form>    
+        </section>
+            
+        <section class="contenedorLogin">
+            <h:form class="formulario">
+        <h:outputLabel value="Los mejores precios" style="color: darkslategrey"/>
+            </h:form>    
+        </section>
+            
+        <section class="contenedorLogin">
+            <h:form class="formulario">
+        <h:outputLabel value="Tu Musica favorita se Encuentra Aqui" style="color: darkslategrey"/>
+            </h:form>    
+        </section>
+  </section>
+        </ui:define>
+    
+</ui:composition>
