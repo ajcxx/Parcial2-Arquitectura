@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      template="index.xhtml"
+      >
+    <h:head>
+           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="resources/css/default.css"/>
+        <h:outputStylesheet name="resources/css/cssLayout.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
+        <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
+        <title>Cine Magic</title>
+    </h:head>    
+    <ui:define name="content" class="stylesheet">
+        
+            <table  width="1200">
+            <tr bgcolor="#84CCF8" >
+                <th>
+                       
+                <div id="google_translate_element"></div><script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+                </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   
+   <center>
+   <p:graphicImage value="/resources/imgCine/logo.png"/>
+    </center>
+                    </th>
+             </tr>   
+        </table>
+           
+       <p:carousel itemStyle="width: 1200px;" itemStyleClass="carItem" pageLinks="1" autoPlayInterval="4000" numVisible="1" effect="easeInStrong" circular="true"> 
+     <p:graphicImage value="/resources/imgCine/imagen1.jpg"/>
+   <p:graphicImage value="/resources/imgCine/imagen2.jpg"/>
+   <p:graphicImage value="/resources/imgCine/imagen3.jpg"/>
+   <p:graphicImage value="/resources/imgCine/imagen4.jpg"/>
+  </p:carousel>
+              
+                <table  width="1200" >
+            <tr bgcolor="#84CCF8" >
+                <th>
+                      <h:form id="form1">
+                          <h:commandButton action="#{dashboardView.navega}" value="Comprar boletos"/>
+                      </h:form>
+                    <center> <h1 id="sidenav01">Películas estreno</h1></center>
+       <div style="height:500px">
+    <h:form>
+        <p:growl id="msgs" showDetail="true" />
+ 
+        <p:dashboard id="board" model="#{dashboardView.model}">
+            <p:ajax event="reorder" listener="#{dashboardView.handleReorder}" update="msgs" />
+ 
+            <p:panel id="horas_contadas" header="Horas Contadas">
+                <p:graphicImage value="/resources/imgCine/1.png"/>
+            </p:panel>
+ 
+            <p:panel id="zootopia" header="Zootopia">
+                <p:graphicImage value="/resources/imgCine/2.png"/>
+            </p:panel>
+ 
+            <p:panel id="dioses_de_egipto" header="Dioses de Egipto">
+                <p:graphicImage value="/resources/imgCine/3.png"/>
+            </p:panel>
+ 
+            <p:panel id="deadpool" header="Deadpool">
+                <p:graphicImage value="/resources/imgCine/4.png"/>
+            </p:panel>
+ 
+            <p:panel id="zoolander" header="Zoolander">
+                <p:graphicImage value="/resources/imgCine/5.png"/>
+            </p:panel>
+             <p:panel id="la_jugada_maestra" header="La Jugada Maestra">
+                <p:graphicImage value="/resources/imgCine/6.png"/>
+            </p:panel>
+             <p:panel id="el_renacido" header="El Renacido">
+                <p:graphicImage value="/resources/imgCine/7.png"/>
+            </p:panel>
+             <p:panel id="el_bosque_siniestro" header="El Bosque Siniestro">
+                <p:graphicImage value="/resources/imgCine/8.png"/>
+            </p:panel>
+             <p:panel id="las_aparicio" header="Las Aparicio">
+                <p:graphicImage value="/resources/imgCine/9.png"/>
+            </p:panel>
+        </p:dashboard>
+ 
+        <div style="clear:both" />
+    </h:form>
+</div>
+                    </th>
+             </tr>   
+        </table>
+              
+   </ui:define>
+</ui:composition>
+
