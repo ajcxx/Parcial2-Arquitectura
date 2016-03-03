@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Laura Dennise Santuario Meneses
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                template="index.xhtml">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <ui:define name="content">
+        <h:form id="form">
+            <p:growl id="msgs" showDetail="true" />
+              <h:head>
+<center>
+        <title>Registro</title>
+</center>
+    </h:head>
+    <h:body>
+        <center>
+
+            <h:messages infoStyle="color: red;list-style:none;"/>
+
+            <!--<h:outputLabel value="Ingreso Exitoso"/>-->
+             <h:outputText value="Usuario:" style="color: black" />
+            <h:outputText value="#{ingresar.nombre}" />
+            
+            <br/>
+            <h:graphicImage library="imgLDS" name="correcto.png" style="align-content: center"/>
+            <h3 style="color: black">Antes de Realizar Cualquier Compra Registre sus Datos </h3>
+           
+            <h:form >
+
+                <h:panelGrid columns="3">
+                    <h:outputText value="Usuario " style="color: black"/>
+                    <h:inputText id="nombre" label="nombre" style="background-color: white"
+                                 required="true"  requiredMessage="Porfavor Ingrese su Nombre"
+                                 value="#{ingresar.nombre}">
+                        <f:validateLength maximum="30"/>
+                    </h:inputText>
+                    <h:message for="nombre" styleClass="error"  />
+
+                    <h:outputLabel value="Apellido:" for="apellido" style="color: black"/>
+                    <h:inputText id="apellido" label="apellido" style="background-color: white"
+                                 required="true" requiredMessage="Porfavor Ingrese sus Apellidos"
+                                 value="#{ingresar.apeido}" validatorMessage="Solo debe ser menor a 30 caracteres">
+                        <f:validateLength maximum="30"/>
+                    </h:inputText>
+                    <h:message for="apellido" styleClass="error" />
+
+                    <h:outputLabel value="Domicilio:" for="domicilio" style="color: black"/>
+                    <h:inputTextarea id="domicilio" label="domicilio" style="background-color: white"
+                                     required="true" requiredMessage="Porfavor Ingrese el domicilio"
+                                     value="#{ingresar.domicilio}" validatorMessage="Solo debe ser menor a 30 caracteres">
+                        <f:validateLength maximum="30"/>
+                    </h:inputTextarea>
+                    <h:message for="domicilio" styleClass="error"/>
+
+                   <h:outputLabel value="Sexo: " for="sexo" style="color: black"/>
+                    <h:selectOneMenu id="sexo" label="sexo"
+                                     value="#{ingresar.sexo}" style="background-color:white" > 
+                        <f:selectItem itemLabel="Masculino" itemValue="Hombre"/>
+                        <f:selectItem itemLabel="Femenino" itemValue="Mujer"/>
+                    </h:selectOneMenu>
+                    <h:message for="sexo" styleClass="error"/>
+
+                    <h:outputLabel for="hermanos" value="Edad" style="color: black"/>
+                    <h:inputText id="hermano" label="hermanos" size="2" style="background-color: white" 
+                                 required="true" requiredMessage="Cuatrimestres" 
+                                 value="#{ingresar.hermanos}" validatorMessage="Solo se puede usar digitos">
+                    </h:inputText>
+
+                    <h:panelGroup/>
+
+                    <h:commandButton id="register" class="btn btn-default navbar-btn" value="Registrarse" action="open" style="background-color: activeborder" />
+
+                </h:panelGrid>
+                <h:outputText escape="false" value="#{ingresar.result}"/>
+
+
+
+            </h:form>
+
+
+
+
+
+
+
+        </center>
+    </h:body>
+        </h:form>
+    </ui:define>
+</ui:composition>
