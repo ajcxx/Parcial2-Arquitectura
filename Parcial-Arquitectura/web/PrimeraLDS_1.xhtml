@@ -15,6 +15,7 @@ Laura Dennise Santuario Meneses
     <link rel="stylesheet" library="imgLDS" name="deportes.css"/> 
 
     <ui:define name="content">
+         <div class="panel-body" style="background-color: #F3E2A9"> 
         <h:form id="form" >
             <p:growl id="msgs" showDetail="true" />
             <div class="page-header">
@@ -54,7 +55,7 @@ function googleTranslateElementInit() {
                 <div class="col-xs-7 col-md-4">
                     <section class="contenedorLogin">
                         <h:form class="formulario"> 
-                            <h3>Hora Actual</h3>
+                            <h3 style="color: black">Hora Actual</h3>
                             <p:clock pattern="HH:mm:ss dd.MM.yyyy" mode="server" />
                             <center><h2>Usuario</h2></center>
                             <center><div class="form-group">
@@ -85,7 +86,7 @@ function googleTranslateElementInit() {
                     <h:graphicImage library="imgLDS" name="tenis.jpg" />
                 </div>
             </div> </h:form>
-
+         </div>
     </ui:define>
 
 </ui:composition>
