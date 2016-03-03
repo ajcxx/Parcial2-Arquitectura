@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Arturo Eden Aragon Sanchez
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:p="http://primefaces.org/ui"
+xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+template="index.xhtml">
+<link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
+<link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>     
+<script src="resources/js/bootstrap.min.js"></script>
+
+<ui:define name="content">        
+<link rel="stylesheet" href="/Parcial-Arquitectura/resources/css/cssFormulario.css"/>
+<section class="fondoinicio">    
+<section class="contenedorLogin">
+<h:form class="formulario">
+<center><div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'de,en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                    }
+                    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </center>
+<h2> Venta De Discos </h2>        
+
+
+
+<p><h:outputLabel value="Nombre:" for="nombre" style="color: darkslategrey"/></p>
+<h:inputText  pt:placeholder="nombre" label="nombre" style=""
+required="true" requiredMessage="Porfavor Ingrese su Nombre"
+validatorMessage="El nombre debe ser menos de 30 caracteres">
+<f:validateLength maximum="30"/>
+</h:inputText>
+<a><h:message for="nombre" styleClass="error"  /></a>
+
+<p><h:outputLabel value="Apellidos:" style="color: darkslategrey"/></p>
+<p><h:inputText pt:placeholder="apellidos" label="apellido" style=""
+required="true" requiredMessage="Porfavor Ingrese sus Apellidos" 
+validatorMessage="Solo debe ser menor a 30 caracteres">
+<f:validateLength maximum="30"/>
+</h:inputText></p>
+<a><h:message for="Domicilio" styleClass="error"  /></a>
+
+<p><h:outputLabel value="Domicilio:" style="color: darkslategrey"/></p>
+<p><h:inputTextarea pt:placeholder="domicilio" label="domicilio" style=""
+ required="true" requiredMessage="Por favor Ingrese el domicilio"
+ validatorMessage="Solo debe ser menor a 30 caracteres">
+<f:validateLength maximum="30"/>
+</h:inputTextarea></p>
+<a><h:message for="Domicilio" styleClass="error"  /></a>
+
+<p><h:outputLabel value="Folio de CD:" style="color: darkslategrey"/></p>
+<p><h:inputText pt:placeholder="folio" label="Folio"  style="" 
+required="true" requiredMessage="Ingrese el folio del CD"
+validatorMessage="Solo se puede usar digitos">
+<f:validateLength maximum="30"/>
+</h:inputText></p>
+<a><h:message for="Folio" styleClass="error"/></a>
+
+<p><h:outputLabel value="N.de Tarjeta:" style="color: darkslategrey"/></p>
+<p><h:inputText  pt:placeholder="tarjeta" label="Folio" style=""
+required="true" requiredMessage="Porfavor ingrese el numero de tarjeta de credito"
+validatorMessage="El numero no es valido">
+<f:validateLength maximum="30"/> 
+    </h:inputText></p>
+<a><h:message for="tarjeta" styleClass="error" /></a>
+
+<p><h:outputLabel value="Tipo:" style="color: darkslategrey"/></p>
+<p><h:selectOneMenu label="Tipo" style="" > 
+<f:selectItem itemLabel="Master Card"/>
+<f:selectItem itemLabel="Visa"/>
+<f:selectItem itemLabel="Seleccione"/>
+</h:selectOneMenu></p>
+<a><h:message for="tipo" styleClass="error"/></a>
+
+<p><h:outputLabel value="Total:" style="color: darkslategrey"/></p>
+<p><h:inputText  label="Total" style=""
+required="true" requiredMessage="Por favor ingrese el total a pagar"
+validatorMessage="El numero no es valido">
+<f:validateLength maximum="30"/> 
+</h:inputText></p>
+<a><h:message for="total" styleClass="error" /></a>
+
+
+<section class="seccionBotones">
+<h:commandButton id="Cerrar" value="Cerrar Compra" action="open" style="" />
+</section>
+</h:form>
+</section>
+</section>>
+</ui:define>
+
+</ui:composition>
