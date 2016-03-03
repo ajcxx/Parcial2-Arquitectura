@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CArlos Alvarado Luis
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                template="index.xhtml">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <ui:define name="content">
+        <div class="container">
+            <div class="navbar-header" style="background-color: whitesmoke">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    Ingresar
+                    <span class="sr-only">Ingresar</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="google_translate_element"></div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">                
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nick" class="form-control" required="true"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control" required="true"/>
+                    </div>
+                    <button type="submit" class="btn btn-success">Ingresar</button>
+                </form>
+            </div><br/><br/>
+            <div class="panel panel-warning">
+                <div class="panel-heading"> Hoja de Registro </div>
+                <div class="panel-body" style="background-color: #F3E2A9">                    
+                    <form>
+                        <div class="form-group">
+                            <label for="InputNombre">Nombre</label>
+                            <h:inputText class="form-control" id="InputNombre" required="true"></h:inputText>                      
+                        </div>
+                        <div class="form-group">
+                            <label for="InputApellidos">Apellidos</label>                             
+                            <h:inputText class="form-control" id="InputApellidos" required="true"/>
+                        </div>
+                        <div class="form-group">
+                            <h:outputLabel for="InputAdscripcion">Genero</h:outputLabel>
+                            <h:selectOneMenu class="form-control">
+                                <f:selectItem itemLabel="Selecciona" itemValue="" />
+                                <f:selectItem itemLabel="Masculino" itemValue="" />
+                                <f:selectItem itemLabel="Femenino" itemValue="" />
+                            </h:selectOneMenu>                            
+                        </div>
+                        <div class="form-group">
+                            <label for="InputCarrera">Ocupacion</label>
+                            <h:selectOneMenu class="form-control">
+                                <f:selectItem itemLabel="Selecciona" itemValue="" />
+                                <f:selectItem itemLabel="Estudiante" itemValue="" />
+                                <f:selectItem itemLabel="Trabajador" itemValue="" />
+                            </h:selectOneMenu>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="InputCorreo">Correo Institucional</label>
+                            <h:inputText class="form-control" id="InputCorreo" />                            
+                        </div>                        
+                        <div class="form-group">
+                            <label for="InputPass">Contraseña</label>
+                            <h:inputSecret class="form-control" id="InputPass"/>
+                        </div>
+                        <div class="form-group">
+                            <h:commandButton class="btn btn-lg btn-warning btn-block" value="Registrar" action="open"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
