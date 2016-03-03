@@ -9,6 +9,7 @@ CArlos Alvarado Luis
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
                 template="index.xhtml">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link href="resources/css/bootstrap.min.css" rel="stylesheet"></link>
     <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
     <script src="resources/js/bootstrap.min.js"></script>
@@ -22,11 +23,12 @@ CArlos Alvarado Luis
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <div id="google_translate_element"></div>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse">                
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control" required="true"/>
+                        <input type="text" placeholder="Nick" class="form-control" required="true"/>
                     </div>
                     <div class="form-group">
                         <input type="password" placeholder="Password" class="form-control" required="true"/>
@@ -45,15 +47,15 @@ CArlos Alvarado Luis
                     estética de belleza, etc. Así mismo cuenta con áreas jardinadas y un ambiente inigualable para ti y tu familia.
                 </p><br/>
                 <p style="text-align:justify; font-size:14px">No olvides que para mejorar la interacción y mantenerte siempre
-                informado con las mejores ofertas y eventos automaticamente, debes ingresar a tu cuenta. Y si no tienes una, 
-                registrate cuanto antes¡¡¡</p>
+                    informado con las mejores ofertas y eventos automaticamente, debes ingresar a tu cuenta. Y si no tienes una, 
+                    registrate cuanto antes¡¡¡</p>
                 <p><h:form><h:commandLink class="btn btn-primary btn-sm" role="button" >Registrarse</h:commandLink></h:form></p>
             </div>
         </div>
         <div class="container">
             <h:form id="form1">
                 <p:growl id="msgs" showDetail="true" />
-                <h3 style="margin-top:0">Secciones</h3>
+                <center><h2 style="color: white">Secciones</h2></center>>
                 <p:accordionPanel>
                     <p:tab title="Libreria" >
                         <h:panelGrid columns="2" cellpadding="10">
@@ -65,13 +67,13 @@ CArlos Alvarado Luis
                     <p:tab title="Cine">
                         <h:panelGrid columns="2" cellpadding="10">
                             <p:graphicImage library="imgMenu" name="cine.jpg" class="img-rounded"/>
-                            <h:outputText value="" />
+                            <h:outputText value="En Cinemex, nuestros clientes son nuestros invitados y nuestra misión es ser los mejores en divertir a la gente. Con la idea de poderle llegar a más personas nos hemos expandido a múltiples ciudades dentro de México a lo largo del tiempo, teniendo un crecimiento del 35% anual en los últimos 6 años. Hoy en día contamos con más de 271 complejos y 2,361 pantallas alrededor del país y esperando crecer aún más." />
                         </h:panelGrid>
                     </p:tab>
                     <p:tab title="Pizzeria">
                         <h:panelGrid columns="2" cellpadding="10">
                             <p:graphicImage library="imgMenu" name="pizza.jpg" class="img-rounded" />
-                            <h:outputText value="After a break of more than 15 years..." />
+                            <h:outputText value="Hoy en día, Pizzeria sigue atrayendo a su identidad e inspiración de la herencia artesanal original. Cada restaurante sigue haciendo su fresca pizza de plato hondo, desde el principio cada día. Con el tiempo, Pizzeria ha ido ajustando su menú al estilo de vida de las personas. Siempre va a ser acerca de un increíble sabor y maravillosos menús que tienen el balance correcto entre los convites indulgentes y deliciosas y nutritivas opciones. De esta manera nuestros clientes pueden disfrutar Pizza de una manera que se adapte a su estado de ánimo y estilo de vida y a la de sus familias." />
                         </h:panelGrid>
                     </p:tab>
                     <p:tab title="Musica" >
@@ -85,14 +87,14 @@ CArlos Alvarado Luis
                         <h:panelGrid columns="2" cellpadding="10">
                             <p:graphicImage library="imgMenu" name="Deportes.jpg" class="img-rounded" />
                             <h:outputText
-                                value="The story begins as Don Vito Corleone..." />
+                                value="En Deportes no sólo encuentras una gran variedad de productos deportivos sino que puedes tener la seguridad y confianza de que somos una empresa comprometida con nuestros clientes los cuáles merecen calidad al mejor precio. Nuestra tienda de tenis, brinda la facilidad de pagar con tarjetas de crédito y débito, meses sin intereses con tarjetas de credito Banamex y Bancomer, para que puedas comprar esos tenis que tanto te gustan." />
                         </h:panelGrid>
                     </p:tab>
                     <p:tab title="Restaurant">
                         <h:panelGrid columns="2" cellpadding="10">
                             <p:graphicImage library="imgMenu" name="restaurants-005.jpg" class="img-rounded" />
                             <h:outputText
-                                value="The story begins as Don Vito Corleone..." />
+                                value="El Restaurant te ofrece lo mejor de la comida mexicana ya sea para desayunar, comer o cenar. Incluso podrás optar por platillos típicos d ela localidad como las enchiladas tulancingueñas. También es muy céntrico y tiene un agradable ambiente familiar, lo que lo hace el lugar idóneo cuando estás de visita en la Plaza Comercial." />
                         </h:panelGrid>
                     </p:tab>
                     <p:tab title="Mascotas">
@@ -105,5 +107,10 @@ CArlos Alvarado Luis
                 </p:accordionPanel>
             </h:form>
         </div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </ui:define>
 </ui:composition>
