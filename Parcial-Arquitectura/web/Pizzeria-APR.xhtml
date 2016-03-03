@@ -5,12 +5,82 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                template="index.xhtml">
+    
+    
+    <ui:define name="content">
+        
+        <center><h1><h1><strong>Olivo</strong></h1></h1>
+            
+            <h2>"Donde comer y disfrutar se hacen juntos"</h2>
+        
+        </center>
+        
+        <p:contentFlow value="#{imagesView.images}" var="image">
+    <p:graphicImage library="imgLeo" name="#{image}" styleClass="content" />
+    <div class="caption">#{image}</div>
+</p:contentFlow>
+        
+        <center> 
+        <h3>Ven y deleitate con nuestro exquisito menú</h3>
+       
+        </center>
+        
+        <h:form>
+    <p:growl id="msgs" showDetail="true" />
+ 
+    <p:fieldset legend="Comida Mexicana" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:graphicImage library="imgLeo" name="mexicana.jpg" />
+            <h:outputText
+                value="La gastronomía mexicana es el conjunto de platillos endémicos de México que forman parte de sus tradiciones culinarias y que 
+                derivan tanto de la cocina mesoamericana como de la europea, entre otras. El 16 de noviembre de 2010 la gastronomía mexicana fue 
+                reconocida como Patrimonio Inmaterial de la Humanidad por la UNESCO." />
+        </h:panelGrid>
+    </p:fieldset>
+ 
+    <p:fieldset legend="Comida Japonesa" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:graphicImage library="imgLeo" name="japonesa.jpg" />
+            <h:outputText
+                value="La gastronomía de Japón como cocina nacional ha evolucionado, a través de los siglos, a causa de muchos cambios políticos y 
+                sociales, comenzando por la Edad Antigua, en la que la mayoría de la cocina estaba influenciada por la cultura china. Finalmente,
+                la cocina cambió con el advenimiento de la Edad Media que marcó el comienzo de un abandono del elitismo con la normativa del shogunato. " />
+        </h:panelGrid>
+    </p:fieldset>
+    
+    <p:fieldset legend="Comida Francesa" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:graphicImage library="imgLeo" name="francesa.jpg" />
+            <h:outputText
+                value="La gastronomía de Francia está considerada como una de las más importantes del mundo. Está caracterizada por su variedad,
+                fruto de la diversidad regional francesa, tanto cultural como de materias primas, pero también por su refinamiento. Su influencia
+                se deja sentir en casi todas las cocinas del mundo occidental, que han ido incorporando a sus bases conocimientos técnicos de la 
+                cocina francesa." />
+        </h:panelGrid>
+    </p:fieldset>
+    
+    <p:fieldset legend="Comida Italiana" toggleable="true" toggleSpeed="500">
+        <p:ajax event="toggle" listener="#{fieldsetView.handleToggle}" update="msgs" />
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:graphicImage library="imgLeo" name="italiana.jpg" />
+            <h:outputText value="La comida de Italia es variada. Refleja la variedad cultural de sus regiones así como la diversidad de su historia.
+                          La cocina italiana, está incluida dentro de la denominada gastronomía mediterránea y es imitada y practicada en todo el mundo.
+                          Es muy común que se conozca a la gastronomía de Italia por sus platos más famosos, como la pizza, la pasta y el risotto,
+                          pero lo cierto es que es una cocina donde coexisten los abundantes olores y los sabores del mediterráneo."></h:outputText>
+        </h:panelGrid>
+    </p:fieldset>
+    
+    
+    
+</h:form>
+    </ui:define>
+                    
+    
+</ui:composition>
