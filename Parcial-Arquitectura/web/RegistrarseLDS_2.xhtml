@@ -13,9 +13,16 @@ Laura Dennise Santuario Meneses
     <link href="resources/css/simple-sidebar.css" rel="stylesheet"></link>
     <script src="resources/js/bootstrap.min.js"></script>
     <ui:define name="content">
+        <div class="panel-body" style="background-color: #F3E2A9">
         <h:form id="form">
             <p:growl id="msgs" showDetail="true" />
               <h:head>
+                  <center><div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'de,en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                    }
+                    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </center>
 <center>
         <title>Registro</title>
 </center>
@@ -60,16 +67,16 @@ Laura Dennise Santuario Meneses
                     </h:inputTextarea>
                     <h:message for="domicilio" styleClass="error"/>
 
-                   <h:outputLabel value="Sexo: " for="sexo" style="color: black"/>
+                   <h:outputLabel value="Sexo: " for="sexo" style="color:black"/>
                     <h:selectOneMenu id="sexo" label="sexo"
-                                     value="#{ingresar.sexo}" style="background-color:white" > 
+                                     value="#{ingresar.sexo}" style="color: black" > 
                         <f:selectItem itemLabel="Masculino" itemValue="Hombre"/>
                         <f:selectItem itemLabel="Femenino" itemValue="Mujer"/>
                     </h:selectOneMenu>
                     <h:message for="sexo" styleClass="error"/>
 
                     <h:outputLabel for="hermanos" value="Edad" style="color: black"/>
-                    <h:inputText id="hermano" label="hermanos" size="2" style="background-color: white" 
+                    <h:inputText id="hermano" label="hermanos" size="2" style="color: greenyellow" 
                                  required="true" requiredMessage="Cuatrimestres" 
                                  value="#{ingresar.hermanos}" validatorMessage="Solo se puede usar digitos">
                     </h:inputText>
@@ -94,5 +101,6 @@ Laura Dennise Santuario Meneses
         </center>
     </h:body>
         </h:form>
+        </div>
     </ui:define>
 </ui:composition>
