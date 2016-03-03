@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                template="index.xhtml">
+
+
+    <ui:define name="content">
+
+        <center><h3><h1><strong>Pizzeria Simplex</strong></h1></h3>
+
+        </center>
+
+        <center> 
+            <h3>Ordena tu pizza ahora, llena los siguientes campos</h3>
+        </center>
+        <h:form>
+            <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                <h:outputText value="Pizza:" />
+                <p:selectOneButton value="#{pizzeriaForm.option}">
+                    <f:selectItem itemLabel="Pizza salchicha" itemValue="Pizza salchicha" />
+                    <f:selectItem itemLabel="Pizza hawaina" itemValue="Pizza hawaina" />
+                    <f:selectItem itemLabel="Pizza peperoni" itemValue="Pizza peperoni" />
+                    <f:selectItem itemLabel="Pizza chorizo" itemValue="Pizza chorizo" />
+                </p:selectOneButton>
+
+                <p:commandButton value="Solicitar" update="display" icon="ui-icon-check" />
+                <p:spacer />
+
+                <h:outputText value="Selected:" />
+                <h:outputText id="display" value="#{pizzeriaForm.option}" style="font-weight: bold" />
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+
+</ui:composition>
