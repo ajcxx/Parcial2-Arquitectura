@@ -29,11 +29,12 @@
                             </button>
                             <span class="visible-xs navbar-brand">Sidebar menu</span>
                         </div>
-                        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                        <div class="navbar-collapse collapse sidebar-navbar-collapse" style="background-color: #F4FA58">
                             <ul class="nav navbar-nav" id="sidenav01">
                                 <li class="active">
                                     <h:graphicImage library="imgMenu" name="icomenu.jpg" />
                                 </li>
+                                <li><a href="http://localhost:8080/Parcial-Arquitectura/"><span class="glyphicon glyphicon-lock"></span> Inicio</a></li>
                                 <li>
                                     <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
                                         <span class="glyphicon glyphicon-cloud"></span> Submenu 1 <span class="caret pull-right"></span>
@@ -107,7 +108,7 @@
                                     <div class="collapse" id="toggleDemo7" style="height: 0px;">
                                         <ul class="nav nav-list">
                                             <li><a href="#">Submenu2.1</a></li>
-                                            <li><a href="#">Submenu2.2</a></li>
+                                            <li><a href="http://localhost:8080/Parcial-Arquitectura/faces/SegundaCEAL.xhtml">Submenu2.2</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -116,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-9 col-md-10 affix-content">
+            <div class="col-sm-9 col-md-10 affix-content" style="background-image:url(resources/imgMenu/centro-comercial.jpg); background-repeat:no-repeat; background-attachment: scroll">
                 <div>
                     <ui:insert name="content">Default content</ui:insert>
                 </div>
@@ -125,4 +126,3 @@
         </div>
     </h:body>
 </html>
-
