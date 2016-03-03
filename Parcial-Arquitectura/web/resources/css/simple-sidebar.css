@@ -15,7 +15,7 @@ and open the template in the editor.
   }   
 
   html,body{
-    background-color: #f8f8f8;
+    background-color: #886A08;
     height: 100%;
     overflow: hidden;
   }
@@ -111,7 +111,7 @@ and open the template in the editor.
     padding: 0;
   }
   .sidebar-nav .navbar li a:hover {
-    background-color: #428bca;
+    background-color: #886A08;
     color: white;
   }
   .sidebar-nav .navbar li a > .caret {
