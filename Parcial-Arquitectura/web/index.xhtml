@@ -27,7 +27,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <span class="visible-xs navbar-brand">Sidebar menu</span>
+                            <span class="visible-xs navbar-brand">Menu de Secciones</span>
                         </div>
                         <div class="navbar-collapse collapse sidebar-navbar-collapse" style="background-color: #F4FA58">
                             <ul class="nav navbar-nav" id="sidenav01">
@@ -37,12 +37,12 @@
                                 <li><a href="http://localhost:8080/Parcial-Arquitectura/"><span class="glyphicon glyphicon-lock"></span> Inicio</a></li>
                                 <li>
                                     <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
-                                        <span class="glyphicon glyphicon-cloud"></span> Submenu 1 <span class="caret pull-right"></span>
+                                        <span class="glyphicon glyphicon-cloud"></span> Cine <span class="caret pull-right"></span>
                                     </a>
                                     <div class="collapse" id="toggleDemo" style="height: 0px;">
                                         <ul class="nav nav-list">
-                                            <li><a href="#">Submenu1.1</a></li>
-                                            <li><a href="#">Submenu1.2</a></li>
+                                            <li><a href="http://localhost:8080/Parcial-Arquitectura/faces/Cine1.xhtml">Peliculas</a></li>
+                                            <li><a href="http://localhost:8080/Parcial-Arquitectura/faces/Cine2.xhtml">Compra de Boletos</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -118,9 +118,8 @@
                 </div>
             </div>
             <div class="col-sm-9 col-md-10 affix-content" style="background-image:url(resources/imgMenu/centro-comercial.jpg); background-repeat:no-repeat; background-attachment: scroll">
-                <div>
+                
                     <ui:insert name="content">Default content</ui:insert>
-                </div>
                 <!-- <ui:include src="/PrimeraCEAL.xhtml" />-->
             </div>
         </div>
